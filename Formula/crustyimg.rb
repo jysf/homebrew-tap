@@ -1,20 +1,20 @@
 class Crustyimg < Formula
   desc "A fast Rust CLI to view and transform images."
   homepage "https://github.com/jysf/crustyimg"
-  version "0.5.0"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/jysf/crustyimg/releases/download/v0.5.0/crustyimg-aarch64-apple-darwin.tar.xz"
-      sha256 "19c715e3c1f483862ba5db2d2ccba1474a4295ce5b1a3be4abde2ec3dd226273"
+      url "https://github.com/jysf/crustyimg/releases/download/v0.6.0/crustyimg-aarch64-apple-darwin.tar.xz"
+      sha256 "0c55f939233aba1890b1d8c3df293baa8cb508042fbde5d23be7191249f3a1e5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jysf/crustyimg/releases/download/v0.5.0/crustyimg-x86_64-apple-darwin.tar.xz"
-      sha256 "2874fe44a1dcd0c5a8043cab1e82e14ee4a7977825a437e49899714a1937e849"
+      url "https://github.com/jysf/crustyimg/releases/download/v0.6.0/crustyimg-x86_64-apple-darwin.tar.xz"
+      sha256 "de6b70ab8678067d4a74863eaf4e29d517774d318ae3ae8bf5ecb37c6bbe6c22"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jysf/crustyimg/releases/download/v0.5.0/crustyimg-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "ea6daef86e44e107d90b9aa4f3d73cbc60035584b7d174030791e39d90c079ac"
+    url "https://github.com/jysf/crustyimg/releases/download/v0.6.0/crustyimg-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "0706edbffce432418873b3286760877f5e0db7f3fa8dfb10ce4e66cc5151d7ab"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
