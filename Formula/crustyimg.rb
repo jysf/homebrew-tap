@@ -1,20 +1,20 @@
 class Crustyimg < Formula
   desc "A fast Rust CLI to view and transform images."
   homepage "https://github.com/jysf/crustyimg"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/jysf/crustyimg/releases/download/v0.6.0/crustyimg-aarch64-apple-darwin.tar.xz"
-      sha256 "0c55f939233aba1890b1d8c3df293baa8cb508042fbde5d23be7191249f3a1e5"
+      url "https://github.com/jysf/crustyimg/releases/download/v0.7.0/crustyimg-aarch64-apple-darwin.tar.xz"
+      sha256 "8f282eefb4c690fdfe902345fb9abb7b5430d03352b20139d5a338e9a7043097"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jysf/crustyimg/releases/download/v0.6.0/crustyimg-x86_64-apple-darwin.tar.xz"
-      sha256 "de6b70ab8678067d4a74863eaf4e29d517774d318ae3ae8bf5ecb37c6bbe6c22"
+      url "https://github.com/jysf/crustyimg/releases/download/v0.7.0/crustyimg-x86_64-apple-darwin.tar.xz"
+      sha256 "02696daedd9ab1a87c11b4da97df2ca134fbf95b7d03bf2799841284d31069da"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jysf/crustyimg/releases/download/v0.6.0/crustyimg-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "0706edbffce432418873b3286760877f5e0db7f3fa8dfb10ce4e66cc5151d7ab"
+    url "https://github.com/jysf/crustyimg/releases/download/v0.7.0/crustyimg-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "2357c19e13b521f56b93b1162d4bd0bd0d5790ec692780a33d270f44647ccf5d"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
@@ -41,9 +41,15 @@ class Crustyimg < Formula
   end
 
   def install
-    bin.install "crustyimg" if OS.mac? && Hardware::CPU.arm?
-    bin.install "crustyimg" if OS.mac? && Hardware::CPU.intel?
-    bin.install "crustyimg" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "crustyimg"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "crustyimg"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "crustyimg"
+    end
 
     install_binary_aliases!
 
