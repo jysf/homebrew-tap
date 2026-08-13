@@ -5,21 +5,21 @@
 class Bragfile < Formula
   desc "Local-first Go CLI to capture and retrieve career-worthy moments."
   homepage "https://github.com/jysf/bragfile000"
-  version "0.6.0"
+  version "0.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jysf/bragfile000/releases/download/v0.6.0/bragfile000_0.6.0_darwin_amd64.tar.gz"
-      sha256 "113bd6d0a2ed5bd843ed39ccd3f3415fbf06589c60af8b74ee4702e7787f7579"
+      url "https://github.com/jysf/bragfile000/releases/download/v0.6.1/bragfile000_0.6.1_darwin_amd64.tar.gz"
+      sha256 "b5d8e04996045b571deef0da70641171d73468195babfbf4a19aa77543b1103d"
 
       define_method(:install) do
         bin.install "brag"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jysf/bragfile000/releases/download/v0.6.0/bragfile000_0.6.0_darwin_arm64.tar.gz"
-      sha256 "14b63c406e1ed598f511814c7419d93680f07d107eea8a7d0c7406065d08453f"
+      url "https://github.com/jysf/bragfile000/releases/download/v0.6.1/bragfile000_0.6.1_darwin_arm64.tar.gz"
+      sha256 "6dd9cb3bb0375cf979a8a5ad432a6901b9d1a23a28a4869601b88a1521528c73"
 
       define_method(:install) do
         bin.install "brag"
@@ -29,15 +29,15 @@ class Bragfile < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jysf/bragfile000/releases/download/v0.6.0/bragfile000_0.6.0_linux_amd64.tar.gz"
-      sha256 "519a2458019297cf35400707c81be7be46ca37d9680d9e751dcbaf84cbb01bf0"
+      url "https://github.com/jysf/bragfile000/releases/download/v0.6.1/bragfile000_0.6.1_linux_amd64.tar.gz"
+      sha256 "1d211e64fb24dbf101acd6d619461eb4347b38ca15a1ea3673a77653f1366925"
       define_method(:install) do
         bin.install "brag"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jysf/bragfile000/releases/download/v0.6.0/bragfile000_0.6.0_linux_arm64.tar.gz"
-      sha256 "7ff52923bf45c9f622923e2cb5eff3af3b3b20770d55a65f2dabb292865a98d6"
+      url "https://github.com/jysf/bragfile000/releases/download/v0.6.1/bragfile000_0.6.1_linux_arm64.tar.gz"
+      sha256 "194d1e69df92993de8c56fa5d907098c9fdfe9a04becef5f66b9bd05b81f201e"
       define_method(:install) do
         bin.install "brag"
       end
